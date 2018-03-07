@@ -14,4 +14,6 @@ class Product < ApplicationRecord
 
   }
 
+  validates :title, length: {minimum: 10}
+
 end
