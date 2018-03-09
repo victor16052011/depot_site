@@ -28,9 +28,17 @@ class ProductsController < ApplicationController
 
   # GET /products.json
 
-  def index
+    def index
 
     @products = Product.all
+
+    respond_to do |format|
+
+      format.html
+
+      format.xml
+
+    end
 
   end
 
