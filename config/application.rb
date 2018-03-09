@@ -34,6 +34,8 @@ module Depot
 
     config.filter_parameters += [ :credit_card_number ]
 
+    config.middleware.use I18n::JS::Middleware
+
   end
 
 end
