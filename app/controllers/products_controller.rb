@@ -192,15 +192,16 @@ class ProductsController < ApplicationController
 
     end
 
-    def who_bought
+       def who_bought
 
-      @product = Product.find(params[:id])
+    @product = Product.find(params[:id])
 
-      @latest_order = @product.orders.order(:updated_at).last
+    @latest_order = @product.orders.order(:updated_at).last
 
-      if stale?(@latest_order)
+    if stale?(@latest_order)
 
-        respond_to do |format|
+      respond_to do |format|
+
         format.html
 
         format.xml
@@ -208,11 +209,12 @@ class ProductsController < ApplicationController
         format.atom
 
         format.json { render json: @product.to_json(include: :orders) }
-              end
 
-            end
+      end
 
-          end
+    end
+
+  end
 
 
 end

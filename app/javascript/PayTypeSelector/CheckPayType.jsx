@@ -12,13 +12,7 @@ class CheckPayType extends React.Component {
 
         <div className="field">
 
-          <label htmlFor="order_routing_number">
-
-            {I18n.t("orders.form.check_pay_type.routing_number")}
-
-          </label>
-
- 
+          <label htmlFor="order_routing_number">Routing #</label>
 
           <input type="password"
 
@@ -30,13 +24,7 @@ class CheckPayType extends React.Component {
 
         <div className="field">
 
-          <label htmlFor="order_acount_number">
-
-            {I18n.t("orders.form.check_pay_type.account_number")}
-
-          </label>
-
- 
+          <label htmlFor="order_account_number">Account #</label>
 
           <input type="text"
 
